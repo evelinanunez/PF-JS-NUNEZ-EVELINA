@@ -32,3 +32,6 @@ footer a {
 footer a:hover{
     color:blueviolet;
 }
+.estilosCard{
+    width: 18rem;
+}

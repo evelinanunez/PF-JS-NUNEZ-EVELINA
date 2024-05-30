@@ -21,8 +21,16 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#" aria-disabled="true">Sobre el proyecto</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Productos</a>
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Productos
+                          </a>
+                          <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#" id="mostrarProductos">Ver Productos</a></li>
+                            <li><a class="dropdown-item" href="#" id="agregarProducto">Agregar Producto</a></li>
+<!--                             <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li> -->
+                          </ul>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Mis Compras</a>
@@ -35,7 +43,7 @@
             </div>
         </nav>
     </header>
-    <main>
+    <main id="app">
         <div class="container" >
           <div class="row justify-content-end m-auto">
             <div class="col-1 text-center p-3" >
@@ -43,32 +51,46 @@
             </div>
           </div>
         </div>
-        <div class="container">
-            <div class="row align-items-center justify-content-around">
-                <div class="card" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-                <div class="card" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-                <div class="card" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
+        <div class="container" id="formulario">
+          <div class="row justify-content-center">
+            <div class="col-12 col-md-9">
+              <div class="mb-3">
+                <label for="nombreProducto" class="form-label">Nombre producto: </label>
+                <input type="text" class="form-control" id="nombreProducto" placeholder="Indique el nombre del producto">
+              </div>
+              <div class="mb-3">
+                <label for="precioProducto" class="form-label">Precio:</label>
+                <input type="number" class="form-control" id="precioProducto" placeholder="Coloque un precio para el producto">
+              </div>
+              <div class="mb-3">
+                <label for="categoriaProducto" class="form-label">Categoria de producto:</label>
+                <input type="text" class="form-control" id="categoriaProducto" placeholder="Seleccione tipo de producto">
+              </div>
+              <div class="mb-3">
+                <label for="formFile" class="form-label">Seleccione una imagen: </label>
+                <input class="form-control" type="file" id="formFile">
+              </div>
+              <div class="mb-3">
+                <label for="stockProducto" class="form-label">Stock disponible: </label>
+                <input class="form-control" type="number" id="stockProducto">
+              </div>
+              <div class="mb-3">
+                <label for="descripcionProducto" class="form-label">Descripción del producto:</label>
+                <textarea class="form-control" id="descripcionProducto" rows="3"></textarea>
+              </div>
+              <div class="mb-3 text-center">
+                <button type="button" class="btn btn-success" id="btnAgregarProducto">Enviar</button>
+                <button type="button" class="btn btn-dark" id="btnCancelarAgregarProducto">Cancelar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container" >
+            <div class="row align-items-center justify-content-around mb-5" >
+              <div class="col-12 col-mb-3" id="ContenedorProductos">
+
+              </div>
+
             </div>
         </div>
     </main>
