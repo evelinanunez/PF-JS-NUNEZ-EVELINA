@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "titulo": "Cuaderno de Notas",
+        "descripcion": "Cuaderno de notas con 200 páginas rayadas y tapa dura.",
+        "precio": 5.99,
+        "stock": 150,
+        "imagen": "./asserts/img/cuaderno.jpg"
+    },
+    {
+        "id": 2,
+        "titulo": "Bolígrafo de Gel",
+        "descripcion": "Bolígrafo de gel con tinta negra, paquete de 10 unidades.",
+        "precio": 8.49,
+        "stock": 300,
+        "imagen": "./asserts/img/boligrafo.jpg"
+    },
+    {
+        "id": 3,
+        "titulo": "Paquete de Post-it",
+        "descripcion": "Paquete de 12 blocs de notas adhesivas de colores surtidos.",
+        "precio": 7.25,
+        "stock": 200,
+        "imagen": "./asserts/img/postit.jpg"
+    },
+    {
+        "id": 4,
+        "titulo": "Carpeta de Anillas",
+        "descripcion": "Carpeta de anillas A4 con cubierta de plástico resistente, incluye 5 separadores.",
+        "precio": 4.50,
+        "stock": 100,
+        "imagen": "./asserts/img/carpeta.jpg"
+    },
+    {
+        "id": 5,
+        "titulo": "Paquete de Clips",
+        "descripcion": "Paquete de 100 clips de papel tamaño estándar.",
+        "precio": 2.99,
+        "stock": 500,
+        "imagen": "./asserts/img/clips.jpg"
+    }
+]

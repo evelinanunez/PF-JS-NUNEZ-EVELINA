@@ -17,7 +17,7 @@ main {
     display: flex;
     flex-direction: column;
     height: 100%;
-    margin-top: 3.5rem;
+    margin: 4rem;
 }
 footer {
     background-color: #f8f9fa;
@@ -32,6 +32,13 @@ footer a {
 footer a:hover{
     color:blueviolet;
 }
-.estilosCard{
+
+.estilosCard {
     width: 18rem;
+    height: 25rem;
+    margin-bottom: 2rem;
+}
+.estilosCard img{
+    height: 10rem;
+    padding:2rem;
 }

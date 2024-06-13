@@ -1,7 +1,7 @@
-const URL = "https://api-ecommerce-nunez-evelina-default-rtdb.firebaseio.com/";
+//const URL = "https://api-ecommerce-nunez-evelina-default-rtdb.firebaseio.com/";
 
 
-const crearProducto = async (nombre,precio,categoria,stock,descripcion)=>{
+/* const crearProducto = async (nombre,precio,categoria,stock,descripcion)=>{
     const producto = {
         nombre,
         precio,
@@ -11,7 +11,7 @@ const crearProducto = async (nombre,precio,categoria,stock,descripcion)=>{
         descripcion
     }
     try {
-        const response = await fetch(URL + "productos.json", {
+        const response = await fetch("./productos.json", {
             method: "POST",
             body: JSON.stringify(producto),
         })
@@ -20,45 +20,40 @@ const crearProducto = async (nombre,precio,categoria,stock,descripcion)=>{
     }
     
     
-}
-
+} */
+    const crearCardProducto = (producto) =>{
+        const contenedor = document.getElementById("contenedorProductos");;
+        const card = document.createElement("div");
+        card.className= "card";
+        card.className= " card estilosCard";
+        card.innerHTML = `
+                                    <img src="${producto.imagen}" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title">${producto.nombre}</h5>
+                                            <h5>$ ${producto.precio}</h5>
+                                            <p class="card-text">${producto.descripcion}</p>
+                                            <a href="#" class="btn btn-primary">Agregar al Carrito</a>
+                                        </div>
+                            `
+                            contenedor.append(card);                    
+    }
+    
 const obtenerProductos = async() =>{
     try {
-        const response = await fetch(URL + "productos.json", {
-            method:"GET"
+        const response = await fetch("./productos.json");
+        const productos = await response.json();
+        productos.forEach(producto=>{
+            crearCardProducto(producto)
         })
-        const data = await response.json();
-        return data;
+        return productos;
     } catch (error) {
         console.log(error)
     }
 }
 
-const crearCardProducto = (producto) =>{
-    const contenedor = document.getElementById("ContenedorProductos");;
-    const card = document.createElement("div");
-    card.className= "card";
-    card.className= " card estilosCard";
-    card.innerHTML = `
-                                <img src="${producto.imagen}" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                        <h5 class="card-title">${producto.nombre}</h5>
-                                        <h5>$ ${producto.precio}</h5>
-                                        <p class="card-text">${producto.descripcion}</p>
-                                        <a href="#" class="btn btn-primary">Comprar</a>
-                                    </div>
-                        `
-                        contenedor.append(card);                    
-}
 
 
-const mostrarProductos = async () =>{
-    const data = await obtenerProductos();
-    const productos =await Object.keys(data).map(key =>({id:key,...data[key]}));
-    productos.forEach(
-        (producto)=>{ crearCardProducto(producto);}
-    );
-}
+
 
 /* const mostrarFormulario = () => {
     const aplicacion = document.getElementById("app");
@@ -103,44 +98,18 @@ const mostrarProductos = async () =>{
     aplicacion.append(element);
 } */
 
+/* const verCarrito = () => {
 
-const limpiarHtml = () => {
-    const aplicacion = document.getElementById("app");
-    aplicacion.innerHTML= "";
-}    
-
-
-const main = () => {
-    const botonAgregar = document.getElementById("btnAgregarProducto");
-    botonAgregar.addEventListener("click", ()=>{
-        const nombre = document.getElementById("nombreProducto").value;
-        const precio = parseFloat(document.getElementById("precioProducto").value);
-        const categoria = document.getElementById("categoriaProducto").value;
-        const stock = parseFloat(document.getElementById("stockProducto").value);
-        const descripcion = document.getElementById("descripcionProducto").value;
-        crearProducto(nombre,precio,categoria,stock,descripcion);
-        nombre = "";
-        precio="";
-        categoria ="";
-        stock= "";
-        descripcion="";
+    carrito.forEach(producto => {
+    crearTarjetaProductoCarrito(producto)
     })
+}     */
 
-    const linkProductos = document.getElementById("mostrarProductos");
-    linkProductos.addEventListener("click", ()=>{
-        mostrarProductos();
-    })
 
-    const linkAgregarProducto = document.getElementById("agregarProducto");
-    linkAgregarProducto.addEventListener("click", ()=>{
-        mostrarFormulario();
-    })
 
-    const cancelarAgregarProducto = document.getElementById("btnCancelarAgregarProducto");
-    cancelarAgregarProducto.addEventListener("click", ()=>{
-        limpiarHtml();
-    })
+const main = async () => {
+    const productos = await obtenerProductos();
+
 }
 
 
-main();
