@@ -16,12 +16,11 @@ main {
     flex: 1;
     display: flex;
     flex-direction: column;
-    height: 100%;
     margin: 4rem;
+    margin-top: calc(40px + 4rem);
 }
 footer {
-    background-color: #f8f9fa;
-    /* padding: 10px 0; */
+    background-color: #EAB8D9;
     text-align: center;
 }
 
@@ -37,8 +36,97 @@ footer a:hover{
     width: 18rem;
     height: 25rem;
     margin-bottom: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.2s;
 }
-.estilosCard img{
+
+.estilosCard:hover {
+    transform: scale(1.05);
+}
+
+.estilosCard img {
     height: 10rem;
-    padding:2rem;
+    padding: 2rem;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 1rem;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-text {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.cantidad {
+    width: 4rem;
+    padding: 0.5rem;
+    margin-right: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.cantidad:focus {
+    outline: none;
+    border-color: #E38C24;
+}
+
+.btn-agregar-carrito {
+    background-color: #E38C24;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-agregar-carrito:hover {
+    background-color: #cf7b1d;
+}
+
+.btn-agregar-carrito:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(227, 140, 36, 0.5);
+}
+
+
+#contenedorProductos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.navbar-custom {
+    padding: 1rem;
+}
+
+.navbar-brand img {
+    height: 40px; /* Ajusta el tamaño del logo */
+}
+
+.search-bar {
+    width: 200px; /* Ancho específico del input de búsqueda */
+}
+
+@media (min-width: 992px) {
+    .navbar-brand {
+        position: relative;
+        left: 0;
+        transform: none;
+    }
+
+    .search-bar {
+        width: 300px; /* Ancho mayor para pantallas grandes */
+    }
 }

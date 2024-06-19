@@ -4,7 +4,7 @@
         "titulo": "Cuaderno de Notas",
         "descripcion": "Cuaderno de notas con 200 páginas rayadas y tapa dura.",
         "precio": 5.99,
-        "stock": 150,
+        "stock": 2,
         "imagen": "./asserts/img/cuaderno.jpg"
     },
     {
@@ -12,7 +12,7 @@
         "titulo": "Bolígrafo de Gel",
         "descripcion": "Bolígrafo de gel con tinta negra, paquete de 10 unidades.",
         "precio": 8.49,
-        "stock": 300,
+        "stock": 15,
         "imagen": "./asserts/img/boligrafo.jpg"
     },
     {
@@ -20,7 +20,7 @@
         "titulo": "Paquete de Post-it",
         "descripcion": "Paquete de 12 blocs de notas adhesivas de colores surtidos.",
         "precio": 7.25,
-        "stock": 200,
+        "stock": 5,
         "imagen": "./asserts/img/postit.jpg"
     },
     {
@@ -28,7 +28,7 @@
         "titulo": "Carpeta de Anillas",
         "descripcion": "Carpeta de anillas A4 con cubierta de plástico resistente, incluye 5 separadores.",
         "precio": 4.50,
-        "stock": 100,
+        "stock": 9,
         "imagen": "./asserts/img/carpeta.jpg"
     },
     {
