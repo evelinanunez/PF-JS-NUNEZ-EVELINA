@@ -20,7 +20,7 @@ main {
     margin-top: calc(40px + 4rem);
 }
 footer {
-    background-color: #EAB8D9;
+    background-color: #fff;
     text-align: center;
 }
 
@@ -41,6 +41,7 @@ footer a:hover{
     overflow: hidden;
     transition: transform 0.2s;
 }
+
 
 .estilosCard:hover {
     transform: scale(1.05);
@@ -80,7 +81,7 @@ footer a:hover{
     outline: none;
     border-color: #E38C24;
 }
-
+ 
 .btn-agregar-carrito {
     background-color: #E38C24;
     color: white;
@@ -90,6 +91,7 @@ footer a:hover{
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s;
+    text-decoration: none;
 }
 
 .btn-agregar-carrito:hover {

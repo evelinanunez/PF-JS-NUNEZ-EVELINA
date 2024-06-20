@@ -9,77 +9,30 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <header class="fixed-top">
-
-   
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-                <img src="asserts/img/bolso.png" alt="Logo"> E-Commerce
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="./index.html">Productos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./carrito.html"><i class="fa-solid fa-cart-shopping fs-5"></i></a>
-                    </li>
-                </ul>
-                <form class="d-flex">
-                    <input class="form-control me-2 search-bar" type="search" placeholder="Buscar" aria-label="Buscar">
-                    <button class="btn btn-outline-dark" type="submit">Buscar</button>
-                </form>
-            </div>
-        </div>
-    </nav>
-</header>
+    <header class="fixed-top">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid">
+              <a class="navbar-brand" href="./index.html">
+                  <img src="asserts/img/bolso.png" alt="Logo"> E-Commerce
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                      <li class="nav-item">
+                          <a class="nav-link" href="./index.html"><i class="fa-solid fa-basket-shopping fs-6"> PRODUCTOS</i></a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="./carrito.html"><i class="fa-solid fa-cart-shopping fs-6"> CARRITO</i></a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </nav>
+  </header>
     <main>
       <h1 class="text-center mb-5">Productos</h1>
-<!--         <div class="container" >
-          <div class="row justify-content-end m-auto">
-            <div class="col-1 text-center p-3" >
-              <i class="fa-solid fa-square-plus fs-2"></i>
-            </div>
-          </div>
-        </div> -->
-<!--         <div class="container" id="formulario">
-          <div class="row justify-content-center">
-            <div class="col-12 col-md-9">
-              <div class="mb-3">
-                <label for="nombreProducto" class="form-label">Nombre producto: </label>
-                <input type="text" class="form-control" id="nombreProducto" placeholder="Indique el nombre del producto">
-              </div>
-              <div class="mb-3">
-                <label for="precioProducto" class="form-label">Precio:</label>
-                <input type="number" class="form-control" id="precioProducto" placeholder="Coloque un precio para el producto">
-              </div>
-              <div class="mb-3">
-                <label for="categoriaProducto" class="form-label">Categoria de producto:</label>
-                <input type="text" class="form-control" id="categoriaProducto" placeholder="Seleccione tipo de producto">
-              </div>
-              <div class="mb-3">
-                <label for="formFile" class="form-label">Seleccione una imagen: </label>
-                <input class="form-control" type="file" id="formFile">
-              </div>
-              <div class="mb-3">
-                <label for="stockProducto" class="form-label">Stock disponible: </label>
-                <input class="form-control" type="number" id="stockProducto">
-              </div>
-              <div class="mb-3">
-                <label for="descripcionProducto" class="form-label">Descripción del producto:</label>
-                <textarea class="form-control" id="descripcionProducto" rows="3"></textarea>
-              </div>
-              <div class="mb-3 text-center">
-                <button type="button" class="btn btn-success" id="btnAgregarProducto">Enviar</button>
-                <button type="button" class="btn btn-dark" id="btnCancelarAgregarProducto">Cancelar</button>
-              </div>
-            </div>
-          </div>
-        </div> -->
         <div class="container" style="padding-bottom: 3rem;">
           <div id="contenedorProductos">
           </div>
